@@ -1,0 +1,27 @@
+{
+  "pos": {
+    "title": "Point of Sale (POS)",
+    "search_placeholder": "Search by product name or barcode...",
+    "cart": "Shopping Cart",
+    "empty_cart": "Your shopping cart is empty.",
+    "subtotal": "Subtotal",
+    "discount_percent": "Discount (%)",
+    "tax_percent": "Tax/VAT (%)",
+    "total_payable": "Total Payable",
+    "payment_method": "Payment Method",
+    "customer_select": "Select Customer (Optional)",
+    "checkout": "Complete Checkout",
+    "sales_history": "Sales History Ledger",
+    "invoice_placeholder": "Search invoice or customer...",
+    "no_history": "No sales history matching search.",
+    "receipt": "E-Receipt",
+    "receipt_thanks": "Thank you for your business!",
+    "order_received": "Online Order Received!",
+    "cash": "Cash",
+    "bank": "Bank Transfer",
+    "mobile_money": "Mobile Money",
+    "credit": "Credit/Debt",
+    "profit_short": "Profit",
+    "view_receipt": "Receipt"
+  }
+}

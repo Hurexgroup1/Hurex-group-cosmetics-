@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;850;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;750&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Print thermal receipt settings */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  /* Show only the receipt container modal and its children */
+  .fixed.inset-0.bg-black\/60,
+  .fixed.inset-0.bg-black\/60 * {
+    visibility: visible;
+  }
+  /* Absolute margins on viewport */
+  .fixed.inset-0.bg-black\/60 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: white !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .fixed.inset-0.bg-black\/60 .bg-white {
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbar styles */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* MACHO SALAMA / COZY EYE-CARE NIGHT THEME
+   Replaces depressing pitch blackness with a beautiful warm, luxury sepia-cocoa reading layout */
+.dark {
+  --color-zinc-950: #1b1614 !important; /* Soft dark chocolate warm background */
+  --color-zinc-900: #26201d !important; /* Warm cocoa card background */
+  --color-zinc-850: #342c28 !important; /* Slightly lighter cozy card elements */
+  --color-zinc-800: #423934 !important; /* Elegant warm borders and dividers */
+  --color-zinc-700: #5c504a !important; /* Soft warm elements */
+  --color-zinc-600: #8c7d76 !important; /* Cozy muted text/labels */
+  --color-zinc-500: #a3938b !important; /* Soothing amber-tinged labels */
+  --color-zinc-400: #c2b4ad !important; /* Readable light-cocoa labels */
+  
+  --color-zinc-300: #fde8c4 !important; /* Beautiful warm candlelight text */
+  --color-zinc-200: #fef3c7 !important; /* Amber cream */
+  --color-zinc-100: #fffbeb !important; /* Soothing warm ivory */
+  --color-white: #fffdf5 !important; /* Cream-white for readability */
+  --color-zinc-50: #fffdfc !important; /* Cream-white base */
+  
+  background-color: #1b1614 !important;
+  color: #fffbeb !important;
+}
+
+/* Force card backgrounds, sidebars, and inputs inside dark mode to use our warm cozy cocoa colors */
+.dark .bg-white,
+.dark aside,
+.dark header,
+.dark .bg-zinc-900,
+.dark select,
+.dark input,
+.dark textarea {
+  background-color: #26201d !important;
+  color: #fffbeb !important;
+  border-color: #423934 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #a3938b !important;
+}
+
+.dark select option {
+  background-color: #26201d !important;
+  color: #fffbeb !important;
+}
+
+/* Soft gold glow for buttons instead of neon blue to keep nighttime eye strain low */
+.dark .bg-blue-600 {
+  background-color: #d97706 !important; /* Cozy warm amber-600 button */
+  color: #ffffff !important;
+}
+.dark .bg-blue-600:hover {
+  background-color: #b45309 !important;
+}
+.dark .text-blue-600 {
+  color: #fbbf24 !important; /* Warm glowing text */
+}
+.dark .border-blue-600 {
+  border-color: #d97706 !important;
+}
+.dark .hover\:text-blue-600:hover {
+  color: #fbbf24 !important;
+}
+
+/* Cozy success accents */
+.dark .bg-emerald-600 {
+  background-color: #047857 !important; /* Warm emerald green */
+}
+.dark .text-emerald-500,
+.dark .text-emerald-600 {
+  color: #34d399 !important;
+}
+
+/* Soft amber warning flags */
+.dark .bg-amber-500 {
+  background-color: #d97706 !important;
+}
+
+/* Soft red indicators */
+.dark .bg-rose-600,
+.dark .bg-red-600 {
+  background-color: #be123c !important;
+}
+.dark .text-red-500,
+.dark .text-red-600,
+.dark .text-rose-500 {
+  color: #fca5a5 !important;
+}
+
+/* Mwandiko Mweusi (High Contrast Pure Black Text Mode) in Light Theme */
+.black-text-mode:not(.dark),
+.black-text-mode:not(.dark) * {
+  /* Override any text-zinc-XXX or text-gray-XXX color values with real black or very dark slate */
+  --color-zinc-400: #000000 !important;
+  --color-zinc-500: #000000 !important;
+  --color-zinc-600: #000000 !important;
+  --color-zinc-700: #000000 !important;
+  --color-zinc-800: #000000 !important;
+  --color-zinc-900: #000000 !important;
+  
+  --color-gray-400: #000000 !important;
+  --color-gray-500: #000000 !important;
+  --color-gray-600: #000000 !important;
+  --color-gray-700: #000000 !important;
+  --color-gray-800: #000000 !important;
+  --color-gray-900: #000000 !important;
+}
+
+/* Force dark pure black colors when in light mode and black-text-mode is active */
+.black-text-mode:not(.dark) p, 
+.black-text-mode:not(.dark) span:not(.bg-blue-600):not(.bg-emerald-600):not(.bg-red-600):not(.bg-amber-500), 
+.black-text-mode:not(.dark) div:not(.bg-blue-600):not(.bg-emerald-500):not(.bg-amber-500):not(.bg-red-500), 
+.black-text-mode:not(.dark) h1, 
+.black-text-mode:not(.dark) h2, 
+.black-text-mode:not(.dark) h3, 
+.black-text-mode:not(.dark) h4, 
+.black-text-mode:not(.dark) h5, 
+.black-text-mode:not(.dark) h6, 
+.black-text-mode:not(.dark) label, 
+.black-text-mode:not(.dark) td, 
+.black-text-mode:not(.dark) th, 
+.black-text-mode:not(.dark) em {
+  color: #000000 !important;
+  font-weight: 500; /* Enhance font weight slightly for ultimate legibility */
+}
+
+.black-text-mode:not(.dark) .font-bold,
+.black-text-mode:not(.dark) .font-semibold,
+.black-text-mode:not(.dark) .font-extrabold,
+.black-text-mode:not(.dark) .font-black {
+  font-weight: 850 !important; /* Bold headings are made extremely black and crisp */
+}
+
+/* Mwandiko Mwangavu wa Usiku (High Contrast Pure White Text Mode) in Dark Theme */
+.black-text-mode.dark,
+.black-text-mode.dark * {
+  /* Override dark mode muted text variables with crisp pure white or extremely bright light gray */
+  --color-zinc-400: #ffffff !important;
+  --color-zinc-500: #ffffff !important;
+  --color-zinc-600: #ffffff !important;
+  
+  --color-gray-400: #ffffff !important;
+  --color-gray-500: #ffffff !important;
+  --color-gray-600: #ffffff !important;
+}
+
+/* Force pure white colors when in dark mode and black-text-mode is active */
+.black-text-mode.dark p, 
+.black-text-mode.dark span:not(.bg-blue-600):not(.bg-emerald-600):not(.bg-red-600):not(.bg-amber-500), 
+.black-text-mode.dark div:not(.bg-blue-600):not(.bg-emerald-500):not(.bg-amber-500):not(.bg-red-500), 
+.black-text-mode.dark h1, 
+.black-text-mode.dark h2, 
+.black-text-mode.dark h3, 
+.black-text-mode.dark h4, 
+.black-text-mode.dark h5, 
+.black-text-mode.dark h6, 
+.black-text-mode.dark label, 
+.black-text-mode.dark td, 
+.black-text-mode.dark th, 
+.black-text-mode.dark em {
+  color: #ffffff !important;
+  font-weight: 500; /* Enhance font weight slightly for ultimate nighttime readability */
+}
+
+.black-text-mode.dark .font-bold,
+.black-text-mode.dark .font-semibold,
+.black-text-mode.dark .font-extrabold,
+.black-text-mode.dark .font-black {
+  font-weight: 850 !important; /* Headings are made extremely bright and readable */
+}
+
+/* Kukuza Maandishi (Font Size Scale Accessibility Features) */
+html.font-scale-large {
+  font-size: 18px !important;
+}
+
+html.font-scale-xlarge {
+  font-size: 20px !important;
+}
+
+/* Clean background style for cards in light mode when high contrast is active */
+.black-text-mode:not(.dark) .bg-white,
+.black-text-mode:not(.dark) .bg-zinc-50 {
+  border-color: #000000/20 !important;
+}
+
+

@@ -1,0 +1,65 @@
+{
+  "exp": {
+    "title": "Expense Management",
+    "add": "Record Expense",
+    "search": "Search expenses...",
+    "ledger": "Expenses Ledger",
+    "category": "Expense Category",
+    "amount": "Amount (TZS)",
+    "no_expenses": "No expenses recorded matching filters.",
+    "electricity": "Electricity",
+    "water": "Water Bills",
+    "salaries": "Staff Salaries",
+    "transport": "Transport",
+    "rent": "Rent",
+    "maintenance": "Maintenance",
+    "other": "Other / Miscellaneous"
+  },
+  "pl": {
+    "title": "Profit & Loss Statement (P&L)",
+    "gross_revenue": "Gross Revenue (Total Sales)",
+    "cogs": "Cost of Goods Sold (COGS)",
+    "gross_profit": "Gross Profit",
+    "total_expenses": "Operating Expenses",
+    "net_profit": "Net Profit / Net Loss",
+    "performance_indicator": "Performance Indicator",
+    "healthy": "HEALTHY BUSINESS OPERATION",
+    "warning": "ATTENTION: LOSS OR LOW PROFITABILITY"
+  },
+  "rep": {
+    "title": "Business Reports & Analytics",
+    "export_pdf": "Download PDF Report",
+    "tab_overview": "Overview",
+    "tab_sales": "Sales Report",
+    "tab_products": "Products Report",
+    "tab_expenses": "Expenses Report",
+    "tab_customers": "Customers Report",
+    "revenue_trend": "Revenue & Profit Trends",
+    "sales_by_payment": "Sales by Payment Method"
+  },
+  "db": {
+    "title": "Dashboard Overview",
+    "today_sales": "Today's Sales",
+    "today_profit": "Today's Profit",
+    "today_expenses": "Today's Expenses",
+    "low_stock": "Low Stock Alerts",
+    "monthly_sales": "Monthly Sales Analytics",
+    "recent_sales": "Recent Sales",
+    "top_products": "Top Performing Products",
+    "system_audit": "System Audit Logs",
+    "items_count": "items",
+    "view_all_sales": "View All Sales",
+    "profit_margin": "Profit Margin",
+    "total_stock_value": "Total Inventory Value",
+    "registered_customers": "Registered Customers",
+    "no_recent_sales": "No sales recorded yet today."
+  },
+  "cust": {
+    "title": "Customers Relationship Manager (CRM)",
+    "add": "Register Customer",
+    "phone": "Phone Number",
+    "address": "Physical Address",
+    "balance": "Outstanding Balance (TZS)",
+    "no_customers": "No customers registered yet."
+  }
+}

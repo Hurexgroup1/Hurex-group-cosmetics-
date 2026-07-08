@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  hurex-erp-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hurex-erp-web-app
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - hurex-network
+
+networks:
+  hurex-network:
+    driver: bridge

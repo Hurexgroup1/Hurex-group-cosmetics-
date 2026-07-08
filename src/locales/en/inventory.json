@@ -1,0 +1,21 @@
+{
+  "prod": {
+    "title": "Product Inventory",
+    "search": "Search products...",
+    "add": "Register Product",
+    "edit": "Edit Product",
+    "name": "Product Name",
+    "buying_price": "Buying Price (Cost)",
+    "selling_price": "Selling Price (POS)",
+    "quantity": "Stock Quantity",
+    "min_stock": "Min Stock Alert Level",
+    "image_url": "Product Image URL",
+    "image_file": "Or Upload Local Image",
+    "presets": "Quick Presets",
+    "low_stock_badge": "Low",
+    "in_stock_badge": "In Stock",
+    "no_products": "No products registered yet.",
+    "save_success": "Product saved successfully!",
+    "delete_confirm": "Are you sure you want to delete this product?"
+  }
+}

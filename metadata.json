@@ -1,0 +1,6 @@
+{
+  "name": "HUREX GROUP OF COMPANIES LTD",
+  "description": "Mfumo wa kisasa wa kusimamia mauzo duka, bidhaa, matumizi, wateja, duka la mtandaoni na washirika (Affiliate & Referral Multi-Level MLM Tume Engine).",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

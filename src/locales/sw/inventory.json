@@ -1,0 +1,21 @@
+{
+  "prod": {
+    "title": "Usimamizi wa Bidhaa",
+    "search": "Tafuta bidhaa hapa...",
+    "add": "Sajili Bidhaa",
+    "edit": "Hariri Bidhaa",
+    "name": "Jina la Bidhaa",
+    "buying_price": "Gharama ya Kununua",
+    "selling_price": "Bei ya Kuuza POS",
+    "quantity": "Idadi ya Bidhaa (Stock)",
+    "min_stock": "Kiwango cha Chini cha Tahadhari",
+    "image_url": "Kiungo cha Picha ya Bidhaa",
+    "image_file": "Au Pakia Faili kutoka Kifaa",
+    "presets": "Picha za Haraka",
+    "low_stock_badge": "Pungufu",
+    "in_stock_badge": "Ipo",
+    "no_products": "Hakuna bidhaa yoyote iliyosajiliwa bado.",
+    "save_success": "Bidhaa imehifadhiwa kikamilifu!",
+    "delete_confirm": "Je, una uhakika unataka kufuta bidhaa hii?"
+  }
+}

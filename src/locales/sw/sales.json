@@ -1,0 +1,27 @@
+{
+  "pos": {
+    "title": "Kituo cha Mauzo (POS)",
+    "search_placeholder": "Tafuta bidhaa kwa jina au barcode...",
+    "cart": "Kikapu cha Ununuzi",
+    "empty_cart": "Kikapu chako cha ununuzi kiko wazi.",
+    "subtotal": "Jumla Ndogo",
+    "discount_percent": "Punguzo (%)",
+    "tax_percent": "Kodi/VAT (%)",
+    "total_payable": "Kiasi cha Kulipa",
+    "payment_method": "Njia ya Malipo",
+    "customer_select": "Chagua Mteja (Siyo lazima)",
+    "checkout": "Kamilisha Malipo",
+    "sales_history": "Daftari la Historia ya Mauzo",
+    "invoice_placeholder": "Tafuta risiti au mteja...",
+    "no_history": "Hakuna mauzo yanayolingana na utafutaji.",
+    "receipt": "Risiti ya Kielektroniki",
+    "receipt_thanks": "Asante kwa kufanya biashara nasi!",
+    "order_received": "Agizo la Mtandaoni Limepokelewa!",
+    "cash": "Pesa Taslimu",
+    "bank": "Benki",
+    "mobile_money": "Simu (M-Pesa/Tigo)",
+    "credit": "Credit/Debt",
+    "profit_short": "Faida",
+    "view_receipt": "Risiti"
+  }
+}

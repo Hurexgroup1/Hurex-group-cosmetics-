@@ -1,0 +1,65 @@
+{
+  "exp": {
+    "title": "Usimamizi wa Matumizi",
+    "add": "Sajili Matumizi",
+    "search": "Tafuta matumizi...",
+    "ledger": "Orodha ya Matumizi yote",
+    "category": "Kundi la Matumizi",
+    "amount": "Kiasi la Matumizi (TZS)",
+    "no_expenses": "Hakuna matumizi yanayolingana na vichujio.",
+    "electricity": "Umeme",
+    "water": "Maji",
+    "salaries": "Mishahara",
+    "transport": "Usafiri",
+    "rent": "Kodi ya Pango",
+    "maintenance": "Matengenezo",
+    "other": "Mengineyo"
+  },
+  "pl": {
+    "title": "Hesabu ya Faida na Hasara (P&L)",
+    "gross_revenue": "Mapato Ghafi (Jumla ya Mauzo)",
+    "cogs": "Gharama za Bidhaa Zilizouzwa (COGS)",
+    "gross_profit": "Faida Ghafi",
+    "total_expenses": "Matumizi ya Uendeshaji",
+    "net_profit": "Faida Safi / Hasara Safi",
+    "performance_indicator": "Kiashiria cha Utendaji",
+    "healthy": "BIASHARA INAJITOSHELEZA NA INALETA FAIDA",
+    "warning": "TAHADHARI: BIASHARA INAPATA HASARA AU FAIDA NDOGO"
+  },
+  "rep": {
+    "title": "Ripoti na Uchambuzi wa Biashara",
+    "export_pdf": "Pakua Ripoti kama PDF",
+    "tab_overview": "Muhtasari",
+    "tab_sales": "Mauzo",
+    "tab_products": "Bidhaa",
+    "tab_expenses": "Matumizi",
+    "tab_customers": "Wateja",
+    "revenue_trend": "Mwenendo wa Mapato na Faida",
+    "sales_by_payment": "Mauzo kwa Njia ya Malipo"
+  },
+  "db": {
+    "title": "Muhtasari wa Biashara",
+    "today_sales": "Mauzo ya Leo",
+    "today_profit": "Faida ya Leo",
+    "today_expenses": "Matumizi ya Leo",
+    "low_stock": "Bidhaa Zilizoisha",
+    "monthly_sales": "Uchambuzi wa Mauzo ya Mwezi",
+    "recent_sales": "Mauzo ya Hivi Karibuni",
+    "top_products": "Bidhaa Zinazouza Sana",
+    "system_audit": "Kumbukumbu za Mfumo",
+    "items_count": "bidhaa",
+    "view_all_sales": "Tazama Mauzo Yote",
+    "profit_margin": "Kiwango cha Faida",
+    "total_stock_value": "Thamani ya Bidhaa Zote",
+    "registered_customers": "Wateja Waliosajiliwa",
+    "no_recent_sales": "Hakuna mauzo yaliyorekodiwa bado leo."
+  },
+  "cust": {
+    "title": "Usimamizi wa Wateja (CRM)",
+    "add": "Sajili Mteja Mpya",
+    "phone": "Namba ya Simu",
+    "address": "Anwani ya Makazi",
+    "balance": "Baki ya Deni / Mkopo (TZS)",
+    "no_customers": "Hakuna mteja aliyesajiliwa bado."
+  }
+}
