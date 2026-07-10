@@ -349,7 +349,7 @@ export default function OnlineStore({
     const existingIndex = storeCart.findIndex(item => item.product.id === product.id);
     if (existingIndex !== -1) {
       const updated = [...storeCart];
-      if (updated[existingIndex].quantity >= product.quantity) {
+      if (!product.isUnlimited && updated[existingIndex].quantity >= product.quantity) {
         alert(language === 'sw' 
           ? `Onyo: Hakuna stoki ya kutosha ya bidhaa hii kupita ${product.quantity}.` 
           : `Warning: Not enough stock of this product beyond ${product.quantity}.`
@@ -359,7 +359,7 @@ export default function OnlineStore({
       updated[existingIndex].quantity += 1;
       setStoreCart(updated);
     } else {
-      if (product.quantity <= 0) {
+      if (!product.isUnlimited && product.quantity <= 0) {
         alert(language === 'sw' ? 'Bidhaa hii haipo kwenye stoki kwa sasa.' : 'This product is currently out of stock.');
         return;
       }
@@ -373,7 +373,7 @@ export default function OnlineStore({
       if (item.product.id === productId) {
         const newQty = item.quantity + delta;
         if (newQty <= 0) return null;
-        if (newQty > item.product.quantity) {
+        if (!item.product.isUnlimited && newQty > item.product.quantity) {
           alert(language === 'sw' 
             ? `Onyo: Stoki iliyopo ni bidhaa ${item.product.quantity} pekee.` 
             : `Warning: Only ${item.product.quantity} items available in stock.`

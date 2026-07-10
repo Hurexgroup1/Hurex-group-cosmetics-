@@ -1021,6 +1021,15 @@ export default function App() {
     addAuditLog('Ongeza Bidhaa', `Bidhaa "${newP.name}" imesajiliwa na bei ${formatMoney(newP.sellingPrice)}.`);
   };
 
+  const handleAddBulkProducts = (payloads: Omit<Product, 'id'>[]) => {
+    const newProducts: Product[] = payloads.map((p, idx) => ({
+      id: 'p-bulk-' + (Date.now() + idx),
+      ...p
+    }));
+    setProducts(prev => [...newProducts, ...prev]);
+    addAuditLog('Ongeza Bidhaa Nyingi', `Bidhaa mpya ${payloads.length} zimeongezwa kwa mpigo kwenye mfumo.`);
+  };
+
   const handleUpdateProduct = (updated: Product) => {
     setProducts(prev => prev.map(p => p.id === updated.id ? updated : p));
     addAuditLog('Hariri Bidhaa', `Bidhaa "${updated.name}" imefanyiwa marekebisho ya idadi na bei.`);
@@ -1848,6 +1857,7 @@ export default function App() {
                 <Products 
                   products={products}
                   onAddProduct={handleAddProduct}
+                  onAddBulkProducts={handleAddBulkProducts}
                   onUpdateProduct={handleUpdateProduct}
                   onDeleteProduct={handleDeleteProduct}
                   formatMoney={formatMoney}

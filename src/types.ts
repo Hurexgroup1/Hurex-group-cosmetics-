@@ -8,6 +8,7 @@ export interface Product {
   quantity: number;
   minStock: number;
   image?: string;
+  isUnlimited?: boolean;
 }
 
 export interface Customer {

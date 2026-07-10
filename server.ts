@@ -164,14 +164,12 @@ async function startServer() {
   app.use((req, res, next) => {
     // Prevent MIME type sniffing
     res.setHeader("X-Content-Type-Options", "nosniff");
-    // Defend against Clickjacking
-    res.setHeader("X-Frame-Options", "DENY");
     // Enable Browser XSS filter
     res.setHeader("X-XSS-Protection", "1; mode=block");
     // Enforce Strict SSL transport
     res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
-    // Secure Content Policy
-    res.setHeader("Content-Security-Policy", "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data:; img-src 'self' data: https: referrer; connect-src 'self' https:; font-src 'self' https: data:; frame-ancestors 'none';");
+    // Secure Content Policy (allow framing for development preview)
+    res.setHeader("Content-Security-Policy", "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data:; img-src 'self' data: https: referrer; connect-src 'self' https:; font-src 'self' https: data:;");
     // Mitigate metadata leakage
     res.setHeader("Referrer-Policy", "no-referrer");
     next();

@@ -186,7 +186,7 @@ export default function POS({
   const addToCart = (product: Product) => {
     const existing = cart.find(item => item.product.id === product.id);
     if (existing) {
-      if (existing.quantity >= product.quantity) {
+      if (!product.isUnlimited && existing.quantity >= product.quantity) {
         alert(
           language === 'sw'
             ? `Onyo: Hakuna stoki ya kutosha kwa bidhaa "${product.name}". Stoki iliyopo ni ${product.quantity}.`
@@ -209,7 +209,7 @@ export default function POS({
     const cleanBarcode = barcode.trim().toLowerCase();
     const matchedProduct = products.find(p => p.barcode && p.barcode.trim().toLowerCase() === cleanBarcode);
     if (matchedProduct) {
-      if (matchedProduct.quantity <= 0) {
+      if (!matchedProduct.isUnlimited && matchedProduct.quantity <= 0) {
         alert(
           language === 'sw'
             ? `Bidhaa "${matchedProduct.name}" imepatikana lakini haina stoki kwa sasa.`
@@ -236,7 +236,8 @@ export default function POS({
       removeFromCart(productId);
       return;
     }
-    if (newQty > maxQty) {
+    const matchedProduct = products.find(p => p.id === productId);
+    if (matchedProduct && !matchedProduct.isUnlimited && newQty > maxQty) {
       alert(
         language === 'sw'
           ? `Stoki haitoshi. Idadi ya juu iliyopo ni ${maxQty}.`
